@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions – HOLYFAITH ENGLISH SCHOOL</title>
+  <link rel="icon" type="image/png" href="../static/images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+  <div id="splash-screen" class="splash-screen">
+    <div class="splash-orb splash-orb-1"></div>
+    <div class="splash-orb splash-orb-2"></div>
+    <div class="splash-orb splash-orb-3"></div>
+    <div class="splash-content">
+      <div class="splash-logo-wrap">
+        <img src="../static/images/logo.png" alt="School Logo" class="splash-logo">
+      </div>
+      <h1 class="splash-name">HOLYFAITH ENGLISH SCHOOL</h1>
+      <p class="splash-tagline">We Shape Your Future.</p>
+    </div>
+    <button class="splash-skip" onclick="skipSplash()">Skip Intro</button>
+  </div>
+
+  <script>
+    function skipSplash() {
+      const splash = document.getElementById('splash-screen');
+      if (splash) {
+        splash.classList.add('hidden');
+        sessionStorage.setItem('splashShown', 'true');
+        document.body.classList.add('splash-finished');
+      }
+    }
+
+    (function () {
+      const splash = document.getElementById('splash-screen');
+      if (sessionStorage.getItem('splashShown')) {
+        splash.style.display = 'none';
+        document.body.classList.add('splash-finished');
+      } else {
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+            skipSplash();
+            document.body.classList.add('splash-finished');
+          }, 3000);
+        });
+      }
+    })();
+  </script>
+
+  <div class="tricolor"><span></span><span></span><span></span></div>
+
+  <header class="header" id="header">
+    <div class="container">
+      <div class="nav__card">
+        <a href="index.html" class="nav__logo">
+          <img src="../static/images/logo.png" alt="HOLYFAITH Logo" class="nav__logo-img">
+          <span class="nav__logo-name">HOLYFAITH ENGLISH SCHOOL</span>
+        </a>
+        <nav class="nav__center" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link ">Home</a></li>
+            <li><a href="about.html" class="nav__link ">About Us</a></li>
+            <li><a href="academics.html" class="nav__link ">Academics</a></li>
+            <li><a href="admissions.html" class="nav__link active">Admissions</a></li>
+            <li><a href="contact.html" class="nav__link ">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav__right">
+          <a href="admissions.html" class="nav__apply">Apply Now <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+        <div class="nav__toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav__overlay"></div>
+
+  <main>
+<!-- Page Hero Redesign -->
+<section class="about-hero-redesign">
+  <div class="about-hero-bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+  </div>
+
+  <div class="about-hero-redesign__wrapper">
+    <div class="breadcrumb--white">
+      <a href="index.html">Home</a> /
+      <span>Admissions</span>
+    </div>
+    <div class="about-hero-redesign__container">
+      <div class="about-hero-redesign__content" data-aos="fade-right" data-aos-duration="1000">
+        <h1 class="about-hero-redesign__title">Begin Your Child's <span class="about-hero-redesign__title-mark">Journey With Us</span>.</h1>
+        <p class="about-hero-redesign__desc">Admissions are now open from Nursery to Standard 5 with limited seats and a nurturing, value-based learning environment.</p>
+      </div>
+      <div class="about-hero-redesign__visual" data-aos="fade-left" data-aos-duration="1200">
+        <div class="about-hero-redesign__glass-card">
+          <div class="about-hero-redesign__visual-badge">Admissions Open</div>
+          <img src="../static/images/admission.png"
+            alt="Happy students on school campus" class="about-hero-redesign__glass-img" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Admission Procedure -->
+<section class="section section--warm" id="admission-procedure">
+  <div class="container">
+    <span class="stag stag--center"><i class="fas fa-clipboard-check"></i> Admissions</span>
+    <h2 class="stitle stitle--center">Admission <span class="hl">Procedure</span></h2>
+    <p class="sdesc sdesc--center">A simple and transparent step-by-step process to complete your child's admission at HOLYFAITH ENGLISH SCHOOL.</p>
+
+    <div class="sp-hero sp-hero--visual-only" data-aos="fade-up" data-aos-duration="700">
+      <div class="sp-hero__visual">
+        <div class="sp-hero__icon-wrap">
+          <i class="fas fa-graduation-cap sp-hero__cap" aria-hidden="true"></i>
+          <div class="sp-hero__ladder" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sp-timeline">
+      <div class="sp-timeline__item" data-aos="fade-up" data-aos-duration="600">
+        <div class="sp-timeline__dot"></div>
+        <div class="sp-timeline__content">
+          <h4 class="sp-timeline__heading"><span class="sp-timeline__step">Step 1:</span> Application Form</h4>
+          <p class="sp-timeline__text">Obtain the admission form from the school office or download it from the official school website.</p>
+        </div>
+      </div>
+
+      <div class="sp-timeline__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+        <div class="sp-timeline__dot"></div>
+        <div class="sp-timeline__content">
+          <h4 class="sp-timeline__heading"><span class="sp-timeline__step">Step 2:</span> Form Submission</h4>
+          <ul class="sp-timeline__text">
+            <li>Fill out the form carefully with all required details.</li>
+            <li>Submit the completed form along with necessary documents.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sp-timeline__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+        <div class="sp-timeline__dot"></div>
+        <div class="sp-timeline__content">
+          <h4 class="sp-timeline__heading"><span class="sp-timeline__step">Step 3:</span> Required Documents</h4>
+          <ul class="sp-timeline__pills">
+            <li class="sp-pill">Birth Certificate</li>
+            <li class="sp-pill">Address Proof</li>
+            <li class="sp-pill">Previous School Records (if applicable)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sp-timeline__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+        <div class="sp-timeline__dot"></div>
+        <div class="sp-timeline__content">
+          <h4 class="sp-timeline__heading"><span class="sp-timeline__step">Step 4:</span> Interaction / Assessment</h4>
+          <p class="sp-timeline__text">Shortlisted students may be invited for a personal interaction or assessment, depending on the class.</p>
+        </div>
+      </div>
+
+      <div class="sp-timeline__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+        <div class="sp-timeline__dot"></div>
+        <div class="sp-timeline__content">
+          <h4 class="sp-timeline__heading"><span class="sp-timeline__step">Step 5:</span> Admission Confirmation</h4>
+          <p class="sp-timeline__text">Final admission will be confirmed after:</p>
+          <ul class="sp-timeline__text">
+            <li>Verification of documents</li>
+            <li>Successful completion of fee payment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-download-cta" data-aos="fade-up" data-aos-duration="700">
+      <a href="../static/downloads/admission-form.pdf" class="btn btn--accent btn--lg" download="admission-form.pdf">
+        <i class="fas fa-download"></i> Download School Admission Form
+      </a>
+      <p class="form-download-note">If the download does not start, please contact the school office for the latest admission form.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Eligibility -->
+<section class="section section--alt">
+  <div class="container">
+    <span class="stag stag--center"><i class="fas fa-user-check"></i> Eligibility</span>
+    <h2 class="stitle stitle--center">Age <span class="hl">Criteria</span></h2>
+    <p class="sdesc sdesc--center">Minimum age requirements for each class as per academic guidelines.</p>
+    <div class="eligibility__grid">
+      <div class="eligibility-card" data-aos="fade-up">
+        <h4 class="eligibility-card__class">Nursery</h4>
+        <span class="eligibility-card__age">3+ Years</span>
+        <p>Born on or before 31st March 2023</p>
+      </div>
+      <div class="eligibility-card" data-aos="fade-up" data-aos-delay="100">
+        <h4 class="eligibility-card__class">LKG</h4>
+        <span class="eligibility-card__age">4+ Years</span>
+        <p>Born on or before 31st March 2022</p>
+      </div>
+      <div class="eligibility-card" data-aos="fade-up" data-aos-delay="200">
+        <h4 class="eligibility-card__class">UKG</h4>
+        <span class="eligibility-card__age">5+ Years</span>
+        <p>Born on or before 31st March 2021</p>
+      </div>
+      <div class="eligibility-card" data-aos="fade-up" data-aos-delay="300">
+        <h4 class="eligibility-card__class">Std 1 – 5</h4>
+        <span class="eligibility-card__age">6–10 Years</span>
+        <p>Age as per class norms with TC</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Documents Required -->
+<section class="section">
+  <div class="container">
+    <span class="stag stag--center"><i class="fas fa-folder-open"></i> Documents</span>
+    <h2 class="stitle stitle--center">Required <span class="hl">Documents</span></h2>
+    <p class="sdesc sdesc--center">Please keep the following documents ready for the admission process.</p>
+    <div class="documents__grid" data-aos="fade-up">
+      <div class="doc-item"><i class="fas fa-check-circle"></i> Birth Certificate</div>
+      <div class="doc-item"><i class="fas fa-check-circle"></i> Aadhaar Card (Student)</div>
+      <div class="doc-item"><i class="fas fa-check-circle"></i> Passport Photos (4)</div>
+      <div class="doc-item"><i class="fas fa-check-circle"></i> Parent's Aadhaar Card</div>
+      <div class="doc-item"><i class="fas fa-check-circle"></i> Transfer Certificate</div>
+      <div class="doc-item"><i class="fas fa-check-circle"></i> Previous Report Card</div>
+      <div class="doc-item"><i class="fas fa-check-circle"></i> Address Proof</div>
+      <div class="doc-item"><i class="fas fa-check-circle"></i> Caste Certificate</div>
+      <div class="doc-item"><i class="fas fa-check-circle"></i> Medical Records</div>
+    </div>
+  </div>
+</section>
+
+<!-- Admission Form -->
+<section class="section section--alt">
+  <div class="container">
+    <span class="stag stag--center"><i class="fas fa-pen-to-square"></i> Apply Online</span>
+    <h2 class="stitle stitle--center">Admission <span class="hl">Enquiry Form</span></h2>
+    <p class="sdesc sdesc--center">Fill in the details below and our admissions team will guide you through the next steps.</p>
+
+    <div class="admission-wrapper" data-aos="fade-up" data-aos-duration="800">
+      <div class="admission-grid-layout">
+        <div class="admission-form-side">
+          <form id="admissionForm" class="form-premium">
+            <div class="form-section">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label><i class="fas fa-user"></i> First Name <span class="req">*</span></label>
+                  <input type="text" name="student_first_name" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-user"></i> Middle Name</label>
+                  <input type="text" name="student_middle_name" placeholder="Enter your middle name">
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-user"></i> Last Name <span class="req">*</span></label>
+                  <input type="text" name="student_last_name" placeholder="Enter your last name" required>
+                </div>
+                <div class="form-group form-group--full">
+                  <label><i class="fas fa-user-friends"></i> Parent / Guardian Name <span class="req">*</span></label>
+                  <input type="text" name="parent_name" placeholder="Enter parent name" required>
+                </div>
+                <div class="form-group form-group--full">
+                  <label><i class="fas fa-mobile-alt"></i> Mobile Number <span class="req">*</span></label>
+                  <input type="tel" name="mobile_number" placeholder="Enter mobile number" required>
+                </div>
+                <div class="form-group form-group--full">
+                  <label><i class="fas fa-envelope-open-text"></i> Parent E-mail ID <span class="req">*</span></label>
+                  <input type="email" name="parent_email" placeholder="parent@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-city"></i> City <span class="req">*</span></label>
+                  <input type="text" name="city" placeholder="Enter your city" required>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-map-marked-alt"></i> State <span class="req">*</span></label>
+                  <input type="text" name="state" placeholder="Enter your state" required>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-birthday-cake"></i> Date of Birth <span class="req">*</span></label>
+                  <input type="date" name="dob" required>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-university"></i> Class Applying For <span class="req">*</span></label>
+                  <select name="student_class" required>
+                    <option value="">Select Class</option>
+                    <option>Nursery</option>
+                    <option>LKG</option>
+                    <option>UKG</option>
+                    <option>Std 1</option>
+                    <option>Std 2</option>
+                    <option>Std 3</option>
+                    <option>Std 4</option>
+                    <option>Std 5</option>
+                  </select>
+                </div>
+                <div class="form-group form-group--full">
+                  <label><i class="fas fa-calendar-alt"></i> Academic Year <span class="req">*</span></label>
+                  <select name="academic_year" required>
+                    <option value="">Select Academic Year</option>
+                    <option>2026-2027</option>
+                    <option>2027-2028</option>
+                    <option>2028-2029</option>
+                  </select>
+                </div>
+                <div class="form-group form-group--full">
+                  <label><i class="fas fa-home"></i> Address <span class="req">*</span></label>
+                  <textarea name="address" placeholder="Enter complete address" required></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-footer">
+              <button type="submit" class="btn-submit-premium" id="submitBtn">
+                <span>Submit</span>
+              </button>
+              <p class="admission-privacy-note">We respect your privacy. Your details will only be used for admission guidance.</p>
+            </div>
+          </form>
+        </div>
+
+        <div class="admission-info-side">
+          <div class="info-badge">YOUR JOURNEY STARTS HERE</div>
+          <h2 class="info-title">What Happens After You Apply?</h2>
+          <p class="info-subtitle">Three simple steps to begin</p>
+
+          <div class="info-steps">
+            <div class="info-step js-info-step is-open">
+              <div class="info-step-icon"><i class="fas fa-file-invoice"></i></div>
+              <div class="info-step-content">
+                <button type="button" class="info-step-toggle" aria-expanded="true">
+                  <span>We Review Your Enquiry</span>
+                </button>
+                <p class="info-step-detail">Academic team evaluates your enquiry and documents.</p>
+              </div>
+            </div>
+            <div class="info-step info-step--highlight js-info-step">
+              <div class="info-step-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="info-step-content">
+                <button type="button" class="info-step-toggle" aria-expanded="false">
+                  <span>Personal Counselling Call</span>
+                </button>
+                <p class="info-step-detail">Dedicated counsellor answers your questions.<br>Clear explanation of our approach, no pressure.</p>
+              </div>
+            </div>
+            <div class="info-step js-info-step">
+              <div class="info-step-icon"><i class="fas fa-user-check"></i></div>
+              <div class="info-step-content">
+                <button type="button" class="info-step-toggle" aria-expanded="false">
+                  <span>Perfect Program Match</span>
+                </button>
+                <p class="info-step-detail">Recommended program based on readiness.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Supabase Integration -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  // Supabase configuration
+  const SUPABASE_URL = 'https://mibqsofepprdzxmoxbnw.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1pYnFzb2ZlcHByZHp4bW94Ym53Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQzMTE3NTksImV4cCI6MjA4OTg4Nzc1OX0.mzuUBuhiIGFFjXpxZ0rFv83mHnWF2Oq7Giqojd7Dr6o';
+  
+  // Initialize Supabase client
+  let supabase = null;
+  if (SUPABASE_URL && SUPABASE_ANON_KEY) {
+    supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    console.log('✓ Supabase initialized for admissions form');
+  } else {
+    console.warn('⚠️ Supabase credentials not found. Form will work in demo mode.');
+  }
+
+  document.getElementById('admissionForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const submitBtn = document.getElementById('submitBtn');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<span>Submitting...</span>';
+    submitBtn.disabled = true;
+
+    const formData = new FormData(this);
+    const data = {
+      student_first_name: formData.get('student_first_name'),
+      student_middle_name: formData.get('student_middle_name') || null,
+      student_last_name: formData.get('student_last_name'),
+      parent_name: formData.get('parent_name'),
+      mobile_number: formData.get('mobile_number'),
+      parent_email: formData.get('parent_email'),
+      city: formData.get('city'),
+      state: formData.get('state'),
+      dob: formData.get('dob'),
+      student_class: formData.get('student_class'),
+      academic_year: formData.get('academic_year'),
+      address: formData.get('address'),
+      created_at: new Date().toISOString()
+    };
+
+    try {
+      if (supabase) {
+        // Submit to Supabase
+        const { data: result, error } = await supabase
+          .from('admissions')
+          .insert([data]);
+
+        if (error) throw error;
+
+        alert('✓ Thank you! Your admission enquiry has been submitted successfully. Our team will contact you soon.');
+        this.reset();
+      } else {
+        // Demo mode - no Supabase
+        console.log('Demo mode - Form data:', data);
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        alert('✓ Thank you! Your admission enquiry has been received. Our team will contact you soon.\n\n(Demo mode - Data not saved. Configure Supabase to enable storage.)');
+        this.reset();
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('✗ Sorry, there was an error submitting your form. Please try again or contact the school directly at +91 9923873374');
+    } finally {
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+    }
+  });
+</script>
+
+<!-- Payment & Download -->
+<section class="section">
+  <div class="container">
+    <span class="stag stag--center"><i class="fas fa-info-circle"></i> More Info</span>
+    <h2 class="stitle stitle--center">Fee Payment &amp; <span class="hl">Downloads</span></h2>
+    <p class="sdesc sdesc--center">Additional resources for parents and prospective families.</p>
+    <div class="pd__grid">
+      <div class="pd-card" data-aos="fade-up">
+        <div class="pd-card__icon"><i class="fas fa-credit-card"></i></div>
+        <h3>Fee Payment</h3>
+        <p>Pay fees conveniently through bank transfer, UPI, or at the school office. Monthly and annual payment plans
+          available.</p>
+        <a href="contact.html" class="btn btn--primary"><i class="fas fa-phone-alt"></i> Contact for
+          Details</a>
+      </div>
+      <div class="pd-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="pd-card__icon"><i class="fas fa-download"></i></div>
+        <h3>Download Brochure</h3>
+        <p>Download our school brochure to learn more about our curriculum, facilities, and admission process.</p>
+        <a href="../static/downloads/brochure.pdf" class="btn btn--outline" download="brochure.pdf"><i class="fas fa-file-pdf"></i> Download PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section--alt">
+  <div class="container">
+    <span class="stag stag--center"><i class="fas fa-question-circle"></i> FAQ</span>
+    <h2 class="stitle stitle--center">Frequently Asked <span class="hl">Questions</span></h2>
+    <p class="sdesc sdesc--center">Quick, clear answers to the most common admission queries from parents.</p>
+
+    <div class="accordion faq-accordion">
+      <div class="accordion__item active" data-aos="fade-up" data-aos-duration="600">
+        <button class="accordion__header">
+          <span class="accordion__title">What is the minimum age for Nursery admission?</span>
+          <i class="fas fa-chevron-down accordion__chevron"></i>
+        </button>
+        <div class="accordion__body">
+          <p>The child must be at least 3 years old as on 31 March of the academic year. For AY 2026-27, children born
+            on or before 31 March 2023 are eligible.</p>
+        </div>
+      </div>
+      <div class="accordion__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="80">
+        <button class="accordion__header">
+          <span class="accordion__title">Which curriculum does HOLYFAITH follow?</span>
+          <i class="fas fa-chevron-down accordion__chevron"></i>
+        </button>
+        <div class="accordion__body">
+          <p>We follow the State Board curriculum, enriched with activity-based learning, digital tools, and modern
+            classroom practices to build strong academic fundamentals.</p>
+        </div>
+      </div>
+      <div class="accordion__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="140">
+        <button class="accordion__header">
+          <span class="accordion__title">Is school transport available?</span>
+          <i class="fas fa-chevron-down accordion__chevron"></i>
+        </button>
+        <div class="accordion__body">
+          <p>Yes. Transport is available on selected routes with trained staff and safety-focused operations. Route
+            availability can be confirmed during admission counselling.</p>
+        </div>
+      </div>
+      <div class="accordion__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+        <button class="accordion__header">
+          <span class="accordion__title">Are mid-session admissions allowed?</span>
+          <i class="fas fa-chevron-down accordion__chevron"></i>
+        </button>
+        <div class="accordion__body">
+          <p>Yes, they may be considered based on seat availability, previous school records, and academic continuity.
+            Please contact the school office for case-specific guidance.</p>
+        </div>
+      </div>
+      <div class="accordion__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="260">
+        <button class="accordion__header">
+          <span class="accordion__title">Which documents are required at the time of admission?</span>
+          <i class="fas fa-chevron-down accordion__chevron"></i>
+        </button>
+        <div class="accordion__body">
+          <p>Typically required documents include birth certificate, Aadhaar details, passport-size photos, address
+            proof, and previous school records (where applicable).</p>
+        </div>
+      </div>
+      <div class="accordion__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="320">
+        <button class="accordion__header">
+          <span class="accordion__title">How will parents know if admission is confirmed?</span>
+          <i class="fas fa-chevron-down accordion__chevron"></i>
+        </button>
+        <div class="accordion__body">
+          <p>After document verification and completion of the fee process, the school shares admission confirmation
+            through the official contact details provided in the form.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wave">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,40 C360,100 720,0 1080,60 C1260,80 1380,40 1440,50 L1440,0 L0,0 Z" fill="var(--bg)"></path>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <div class="footer__brand">
+            <img src="../static/images/logo.png" alt="Logo" class="footer__logo">
+            <div>
+              <h3 class="footer__brand-name">HOLYFAITH ENGLISH SCHOOL</h3>
+              <p class="footer__brand-sub">We Shape Your Future</p>
+            </div>
+          </div>
+          <p class="footer__desc">Established in 2007, HOLYFAITH ENGLISH SCHOOL is committed to shaping confident, responsible, and future-ready students through quality education and innovative teaching.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/holyfaith.official" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer__social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/919923873374" class="footer__social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Our Programs</h4>
+          <ul class="footer__links">
+            <li><a href="academics.html">Nursery</a></li>
+            <li><a href="academics.html">LKG &amp; UKG</a></li>
+            <li><a href="academics.html">Standard 1–5</a></li>
+            <li><a href="academics.html">Robotics &amp; AI</a></li>
+            <li><a href="academics.html">Smart Education</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Contact Us</h4>
+          <ul class="footer__contact">
+            <li><i class="fas fa-map-marker-alt"></i><span>HOLYFAITH ENGLISH SCHOOL,<br>Rukadi, Kolhapur</span></li>
+            <li><i class="fas fa-phone-alt"></i><span><a href="https://wa.me/919923873374" style="color:inherit" target="_blank" rel="noopener">+91 9923873374</a> / <a href="https://wa.me/917058522522" style="color:inherit" target="_blank" rel="noopener">7058522522</a></span></li>
+            <li><i class="fas fa-envelope"></i><span><a href="mailto:holyfaithenglishschool2007@gmail.com" style="color:inherit">holyfaithenglishschool2007@gmail.com</a></span></li>
+            <li><i class="fas fa-clock"></i><span>Mon – Sat: 8 AM – 4 PM</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tricolor"><span></span><span></span><span></span></div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 HOLYFAITH ENGLISH SCHOOL. All Rights Reserved. | We Shape Your Future</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="../static/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 60 });</script>
+</body>
+
+</html>

@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOLYFAITH ENGLISH SCHOOL – Shaping Learners Who Inspire the World!</title>
+  <link rel="icon" type="image/png" href="../static/images/logo.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+  <!-- Splash Screen -->
+  <div id="splash-screen" class="splash-screen">
+    <!-- Premium Aurora Orbs -->
+    <div class="splash-orb splash-orb-1"></div>
+    <div class="splash-orb splash-orb-2"></div>
+    <div class="splash-orb splash-orb-3"></div>
+
+    <div class="splash-content">
+      <div class="splash-logo-wrap">
+        <img src="../static/images/logo.png" alt="School Logo" class="splash-logo">
+      </div>
+      <h1 class="splash-name">HOLYFAITH ENGLISH SCHOOL</h1>
+      <p class="splash-tagline">We Shape Your Future.</p>
+    </div>
+    <button class="splash-skip" onclick="skipSplash()">Skip Intro</button>
+  </div>
+
+  <script>
+    function skipSplash() {
+      const splash = document.getElementById('splash-screen');
+      if (splash) {
+        splash.classList.add('hidden');
+        sessionStorage.setItem('splashShown', 'true');
+        document.body.classList.add('splash-finished');
+      }
+    }
+
+    (function () {
+      const splash = document.getElementById('splash-screen');
+      if (sessionStorage.getItem('splashShown')) {
+        splash.style.display = 'none';
+        document.body.classList.add('splash-finished');
+      } else {
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+            skipSplash();
+            document.body.classList.add('splash-finished');
+          }, 3000);
+        });
+      }
+    })();
+  </script>
+
+  <!-- Tricolor Ribbon -->
+  <div class="tricolor"><span></span><span></span><span></span></div>
+
+  <!-- Header — Floating Card Navbar -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="nav__card">
+        <!-- Logo -->
+        <a href="index.html" class="nav__logo">
+          <img src="../static/images/logo.png" alt="HOLYFAITH Logo" class="nav__logo-img">
+          <span class="nav__logo-name">HOLYFAITH ENGLISH SCHOOL</span>
+        </a>
+
+        <!-- Center Nav Links -->
+        <nav class="nav__center" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link active">Home</a></li>
+            <li><a href="about.html" class="nav__link">About Us</a></li>
+            <li><a href="academics.html" class="nav__link">Academics</a></li>
+            <li><a href="admissions.html" class="nav__link">Admissions</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right Side — Apply Now -->
+        <div class="nav__right">
+          <a href="admissions.html" class="nav__apply">Apply Now <i
+              class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <div class="nav__toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="nav__overlay"></div>
+
+  <!-- Main Content -->
+  <main>
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <!-- Faded campus background -->
+  <div class="hero__bg">
+    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1600&h=900&fit=crop&q=70" alt=""
+      class="hero__bg-img" loading="eager">
+    <div class="hero__bg-overlay"></div>
+  </div>
+
+  <div class="hero__container">
+    <div class="hero__grid">
+
+      <!-- ===== LEFT COLUMN — Text + Form ===== -->
+      <div class="hero__left">
+
+        <!-- Badge -->
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Admissions 2026-27 Open
+        </div>
+
+        <!-- Heading -->
+        <h1 class="hero__title">
+          We Shape Your
+          <span class="hero__title-hl">Future.</span>
+        </h1>
+
+        <p class="hero__sub">Nurturing young minds with academic brilliance, moral values, and future-ready skills since
+          2007. Where every child's potential becomes reality.</p>
+
+        <!-- Enquiry Form Card -->
+        <div class="hero__card">
+          <form id="heroForm" class="hero__form" autocomplete="off">
+            <div class="hero__field hero__field--full">
+              <input type="text" name="name" placeholder="Student Name" required>
+            </div>
+            <div class="hero__field-row">
+              <div class="hero__field">
+                <select name="grade" required>
+                  <option value="" disabled selected>Select Grade</option>
+                  <option value="Nursery">Nursery</option>
+                  <option value="LKG">LKG</option>
+                  <option value="UKG">UKG</option>
+                  <option value="1">Grade 1</option>
+                  <option value="2">Grade 2</option>
+                  <option value="3">Grade 3</option>
+                  <option value="4">Grade 4</option>
+                  <option value="5">Grade 5</option>
+                  <option value="6">Grade 6</option>
+                  <option value="7">Grade 7</option>
+                  <option value="8">Grade 8</option>
+                  <option value="9">Grade 9</option>
+                  <option value="10">Grade 10</option>
+                </select>
+              </div>
+              <div class="hero__field">
+                <input type="tel" name="phone" placeholder="Parent Mobile No." required>
+              </div>
+            </div>
+            <button type="submit" class="hero__cta">
+              Get Brochure <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+          <div style="margin-top:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+            <p class="hero__card-note" style="margin:0"><i class="fas fa-shield-alt"></i> Your information is safe. Our counsellors will reach out shortly.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===== RIGHT COLUMN — Image ===== -->
+      <div class="hero__right">
+        <div class="hero__img-wrap">
+          <img src="../static/images/homepageimg.png"
+            alt="Happy students at HOLYFAITH ENGLISH SCHOOL" loading="eager">
+        </div>
+
+        <!-- Floating decorative icons -->
+        <div class="hero__icon hero__icon--book">
+          <i class="fas fa-book-open"></i>
+        </div>
+        <div class="hero__icon hero__icon--cap">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="hero__icon hero__icon--star">
+          <i class="fas fa-star"></i>
+        </div>
+
+        <!-- Floating trust chip -->
+        <div class="hero__chip">
+          <span><strong>17+ Years</strong> of Excellence</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats" id="stats">
+  <div class="container">
+    <div class="stats__grid">
+      <div class="stat" data-aos="fade-up">
+        <div class="stat__icon"><i class="fas fa-award"></i></div>
+        <h3 class="stat__num" data-count="17">0</h3><span class="stat__plus">+</span>
+        <p class="stat__label">Years of Excellence</p>
+      </div>
+      <div class="stat" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat__icon"><i class="fas fa-user-graduate"></i></div>
+        <h3 class="stat__num" data-count="350">0</h3><span class="stat__plus">+</span>
+        <p class="stat__label">Happy Students</p>
+      </div>
+      <div class="stat" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat__icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <h3 class="stat__num" data-count="20">0</h3><span class="stat__plus">+</span>
+        <p class="stat__label">Dedicated Staff</p>
+      </div>
+      <div class="stat" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat__icon"><i class="fas fa-trophy"></i></div>
+        <h3 class="stat__num stat__num--text">State Board</h3>
+        <p class="stat__label">Curriculum</p>
+      </div>
+      <div class="stat" data-aos="fade-up" data-aos-delay="400">
+        <div class="stat__icon"><i class="fas fa-handshake"></i></div>
+        <h3 class="stat__num stat__num--text" style="font-size:1.1rem">Mitsure Tech</h3>
+        <p class="stat__label">Technology Partner</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT HOME ===== -->
+<section class="section about-home" id="about-home">
+  <div class="container">
+    <div class="about-home__grid">
+      <div class="about-home__img-wrap" data-aos="fade-right">
+        <div class="about-home__img-frame">
+          <img src="../static/images/school1.png"
+            alt="Indian boy and girl studying together at HOLYFAITH ENGLISH SCHOOL" class="about-home__img"
+            loading="lazy">
+        </div>
+        <div class="about-home__exp">
+          <span class="about-home__exp-num">17+</span>
+          <span class="about-home__exp-txt">Years</span>
+        </div>
+      </div>
+      <div data-aos="fade-left">
+        <span class="stag"><i class="fas fa-school"></i> About Us</span>
+        <h2 class="stitle">We Shape Your <span class="hl">Future</span></h2>
+        <p>Established in 2007, HOLYFAITH ENGLISH SCHOOL, Rukadi has grown into a trusted institution committed to
+          providing quality education to the children of Rukadi and surrounding areas. With over 17 years of excellence,
+          we nurture young minds with strong values and a passion for learning.</p>
+        <p>We emphasize innovative teaching methods, holistic development, and fostering creativity alongside discipline
+          — in collaboration with <strong>Mitsure Technologies LLP</strong>. Our students consistently bring pride
+          through achievements in academics, sports, and extracurricular activities.</p>
+        <div class="about-home__features">
+          <div class="about-home__feat"><i class="fas fa-check-circle"></i><span>Academic Excellence</span></div>
+          <div class="about-home__feat"><i class="fas fa-check-circle"></i><span>Holistic Development</span></div>
+          <div class="about-home__feat"><i class="fas fa-check-circle"></i><span>Well-Equipped Classrooms</span></div>
+          <div class="about-home__feat"><i class="fas fa-check-circle"></i><span>Transport Services</span></div>
+        </div>
+        <a href="about.html" class="btn btn--primary"><i class="fas fa-arrow-right"></i> Read More About
+          Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="section section--alt" id="why-us">
+  <div class="container">
+    <span class="stag stag--center"><i class="fas fa-star"></i> Why Choose Us</span>
+    <h2 class="stitle stitle--center">What Makes Us <span class="hl">Different</span></h2>
+    <p class="sdesc sdesc--center">Modern education powered by innovation, values, and care.</p>
+
+    <div class="why__grid">
+      <div class="why-card" data-aos="fade-up">
+        <div class="why-card__img">
+          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop"
+            alt="Robotics & AI" loading="lazy">
+        </div>
+        <span class="why-card__tag"><i class="fas fa-robot"></i> Tech</span>
+        <div class="why-card__body">
+          <h4>Robotics &amp; AI Based Education</h4>
+          <p>Hands-on robotics and AI-powered learning in collaboration with Mitsure Technologies LLP.</p>
+        </div>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="why-card__img">
+          <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=400&h=300&fit=crop"
+            alt="Personality Development - Indian students" loading="lazy">
+        </div>
+        <span class="why-card__tag"><i class="fas fa-user-tie"></i> Life Skills</span>
+        <div class="why-card__body">
+          <h4>Personality Development</h4>
+          <p>Structured programs for confidence building, public speaking, leadership, and social skills.</p>
+        </div>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="why-card__img">
+          <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?w=400&h=300&fit=crop" alt="Self Defence"
+            loading="lazy">
+        </div>
+        <span class="why-card__tag"><i class="fas fa-shield-alt"></i> Fitness</span>
+        <div class="why-card__body">
+          <h4>Self Defence</h4>
+          <p>Training students in self-defence techniques to build strength, discipline, and confidence.</p>
+        </div>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="why-card__img">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop" alt="Yoga"
+            loading="lazy">
+        </div>
+        <span class="why-card__tag"><i class="fas fa-spa"></i> Wellness</span>
+        <div class="why-card__body">
+          <h4>Yoga</h4>
+          <p>Daily yoga sessions promoting physical fitness, mental clarity, and emotional balance.</p>
+        </div>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="why-card__img">
+          <img src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=400&h=300&fit=crop"
+            alt="Classical Dance Kathak" loading="lazy">
+        </div>
+        <span class="why-card__tag"><i class="fas fa-music"></i> Arts</span>
+        <div class="why-card__body">
+          <h4>Classical Dance (Kathak)</h4>
+          <p>Professional Kathak training nurturing grace, rhythm, and appreciation for Indian classical arts.</p>
+        </div>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="why-card__img">
+          <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&h=300&fit=crop"
+            alt="Drawing & Painting" loading="lazy">
+        </div>
+        <span class="why-card__tag"><i class="fas fa-palette"></i> Creative</span>
+        <div class="why-card__body">
+          <h4>Drawing &amp; Painting</h4>
+          <p>Creative art sessions developing imagination, fine motor skills, and artistic expression.</p>
+        </div>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="why-card__img">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop"
+            alt="English Speaking" loading="lazy">
+        </div>
+        <span class="why-card__tag"><i class="fas fa-comments"></i> Language</span>
+        <div class="why-card__body">
+          <h4>English Speaking</h4>
+          <p>Immersive English environment with dedicated spoken English and language enrichment programs.</p>
+        </div>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="why-card__img">
+          <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=300&fit=crop"
+            alt="Olympiad Exams - Indian students" loading="lazy">
+        </div>
+        <span class="why-card__tag"><i class="fas fa-trophy"></i> Compete</span>
+        <div class="why-card__body">
+          <h4>Olympiad Exams</h4>
+          <p>Preparing students for national and international Olympiad competitions in Maths, Science, and more.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:16px" data-aos="fade-up">
+      <a href="academics.html" class="btn-explore">
+        <span class="btn-explore__text">Explore Our Programs</span>
+        <span class="btn-explore__icon"><i class="fas fa-arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROGRAMS ===== -->
+<section class="section" id="programs">
+  <div class="container">
+    <span class="stag stag--center"><i class="fas fa-graduation-cap"></i> Our Programs</span>
+    <h2 class="stitle stitle--center">Academic <span class="hl">Programs</span></h2>
+    <p class="sdesc sdesc--center">A structured learning journey — from first steps to academic excellence.</p>
+
+    <div class="programs-v3__grid">
+      <!-- Nursery Card -->
+      <div class="program-v3-card" data-aos="fade-up">
+        <div class="program-v3-card__num">01</div>
+        <div class="program-v3-card__icon"><i class="fas fa-baby"></i></div>
+        <span class="program-v3-card__age">Nurturing Steps • Age 3+</span>
+        <h3 class="program-v3-card__title">Nursery</h3>
+        <ul class="program-v3-card__list">
+          <li><i class="fas fa-check"></i> Play-based sensory learning</li>
+          <li><i class="fas fa-check"></i> Foundational social skills</li>
+          <li><i class="fas fa-check"></i> Cognitive development</li>
+        </ul>
+        <a href="academics.html" class="program-v3-card__link">Curriculum <i
+            class="fas fa-chevron-right"></i></a>
+      </div>
+
+      <!-- LKG Card -->
+      <div class="program-v3-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="program-v3-card__num">02</div>
+        <div class="program-v3-card__icon"><i class="fas fa-shapes"></i></div>
+        <span class="program-v3-card__age">Emerging Minds • Age 4+</span>
+        <h3 class="program-v3-card__title">LKG</h3>
+        <ul class="program-v3-card__list">
+          <li><i class="fas fa-check"></i> Foundational literacy</li>
+          <li><i class="fas fa-check"></i> Interactive numeracy</li>
+          <li><i class="fas fa-check"></i> Creative exploration</li>
+        </ul>
+        <a href="academics.html" class="program-v3-card__link">Curriculum <i
+            class="fas fa-chevron-right"></i></a>
+      </div>
+
+      <!-- UKG Card -->
+      <div class="program-v3-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="program-v3-card__num">03</div>
+        <div class="program-v3-card__icon"><i class="fas fa-puzzle-piece"></i></div>
+        <span class="program-v3-card__age">Ready for School • Age 5+</span>
+        <h3 class="program-v3-card__title">UKG</h3>
+        <ul class="program-v3-card__list">
+          <li><i class="fas fa-check"></i> Advanced language skills</li>
+          <li><i class="fas fa-check"></i> Logical reasoning basics</li>
+          <li><i class="fas fa-check"></i> Academic readiness</li>
+        </ul>
+        <a href="academics.html" class="program-v3-card__link">Curriculum <i
+            class="fas fa-chevron-right"></i></a>
+      </div>
+
+      <!-- Primary Card -->
+      <div class="program-v3-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="program-v3-card__num">04</div>
+        <div class="program-v3-card__icon"><i class="fas fa-book-reader"></i></div>
+        <span class="program-v3-card__age">Academic Core • Std 1 – 5</span>
+        <h3 class="program-v3-card__title">Primary Section</h3>
+        <ul class="program-v3-card__list">
+          <li><i class="fas fa-check"></i> State Board Excellence</li>
+          <li><i class="fas fa-check"></i> Robotics & AI Integration</li>
+          <li><i class="fas fa-check"></i> Holistic Development</li>
+        </ul>
+        <a href="academics.html" class="program-v3-card__link">Curriculum <i
+            class="fas fa-chevron-right"></i></a>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:40px" data-aos="fade-up">
+      <a href="academics.html" class="btn-explore">
+        <span class="btn-explore__text">View Detailed Assessment</span>
+        <span class="btn-explore__icon"><i class="fas fa-arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRINCIPAL MESSAGE ===== -->
+<section class="section section--alt" id="principal">
+  <div class="container">
+    <span class="stag stag--center"><i class="fas fa-quote-left"></i> Principal's Message</span>
+    <h2 class="stitle stitle--center">Words From <span class="hl">Our Principal</span></h2>
+    <p class="sdesc sdesc--center">Guiding our students towards excellence with vision and dedication.</p>
+
+    <div class="principal__card" data-aos="fade-up">
+      <div class="principal__img-wrap">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face"
+          alt="Principal" class="principal__img" loading="lazy">
+      </div>
+      <div class="principal__body">
+        <blockquote class="principal__quote">
+          "Education is not just about imparting knowledge; it is about building character, nurturing creativity, and
+          preparing every child to face the challenges of tomorrow with confidence. At HOLYFAITH, we believe every child
+          is unique and deserves the opportunity to shine."
+        </blockquote>
+        <p class="principal__name">Dr. Nisha Tandale</p>
+        <p class="principal__desg">Principal, HOLYFAITH ENGLISH SCHOOL, Rukadi</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PARENT TESTIMONIALS ===== -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <span class="stag stag--center"><i class="fas fa-star"></i> Testimonials</span>
+    <h2 class="stitle stitle--center">What Parents <span class="hl">Say About Us</span></h2>
+    <p class="sdesc sdesc--center">Real words from the families who trust us with their children's future.</p>
+
+    <div class="testi-slider" data-aos="fade-up">
+      <div class="testi-track" id="testiTrack">
+
+        <div class="testi-card">
+          <div class="testi-card__stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testi-card__text">"My daughter has blossomed since joining HOLYFAITH. The teachers are incredibly
+            nurturing and the school's focus on both academics and values is exactly what we wanted. We couldn't be
+            happier!"</p>
+          <div class="testi-card__author">
+            <div>
+              <p class="testi-card__name">Sneha Patil</p>
+              <p class="testi-card__role">Parent of UKG Student</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-card__stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testi-card__text">"The robotics program is outstanding! My son comes home excited about what he
+            learned every day. The technology integration at this school is far ahead of others in the area."</p>
+          <div class="testi-card__author">
+            <div>
+              <p class="testi-card__name">Rajesh Deshmukh</p>
+              <p class="testi-card__role">Parent of Std 3 Student</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-card__stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testi-card__text">"What sets HOLYFAITH apart is the personal attention every child receives. The
+            staff genuinely cares about each student's growth. My child's confidence has improved tremendously."</p>
+          <div class="testi-card__author">
+            <div>
+              <p class="testi-card__name">Anjali Kulkarni</p>
+              <p class="testi-card__role">Parent of Std 5 Student</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-card__stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="testi-card__text">"The Kathak and yoga classes are a wonderful addition. My daughter participates in
+            dance competitions now — something we never imagined. HOLYFAITH truly nurtures hidden talents."</p>
+          <div class="testi-card__author">
+            <div>
+              <p class="testi-card__name">Priya Jadhav</p>
+              <p class="testi-card__role">Parent of LKG Student</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-card__stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testi-card__text">"We moved from the city and were worried about finding a good school in Rukadi.
+            HOLYFAITH exceeded all expectations — caring teachers, modern facilities, and a great learning atmosphere."
+          </p>
+          <div class="testi-card__author">
+            <div>
+              <p class="testi-card__name">Suresh More</p>
+              <p class="testi-card__role">Parent of Nursery Student</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slider Controls -->
+      <div class="testi-controls">
+        <button class="testi-btn testi-btn--prev" id="testiPrev" aria-label="Previous">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="testi-dots" id="testiDots"></div>
+        <button class="testi-btn testi-btn--next" id="testiNext" aria-label="Next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta" id="cta">
+  <div class="cta__overlay"></div>
+  <div class="container">
+    <div class="cta__content" data-aos="zoom-in">
+      <div class="hero__tagline"
+        style="margin-bottom:20px;background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.9)">
+        <i class="fas fa-bell"></i> Limited Seats
+      </div>
+      <h2 class="cta__title">Admissions 2026-27 <span class="hl">Now Open!</span></h2>
+      <p class="cta__desc">Give your child the gift of quality education. Secure their spot at HOLYFAITH ENGLISH SCHOOL
+        today.</p>
+      <div class="cta__btn-wrap">
+        <a href="admissions.html" class="btn btn--coral btn--lg"><i class="fas fa-pen-to-square"></i> Apply
+          Now</a>
+        <a href="contact.html" class="btn btn--ghost btn--lg"><i class="fas fa-phone-alt"></i> Contact
+          Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__wave">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,40 C360,100 720,0 1080,60 C1260,80 1380,40 1440,50 L1440,0 L0,0 Z" fill="var(--bg)"></path>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <div class="footer__brand">
+            <img src="../static/images/logo.png" alt="Logo" class="footer__logo">
+            <div>
+              <h3 class="footer__brand-name">HOLYFAITH ENGLISH SCHOOL</h3>
+              <p class="footer__brand-sub">We Shape Your Future</p>
+            </div>
+          </div>
+          <p class="footer__desc">Established in 2007, HOLYFAITH ENGLISH SCHOOL is committed to shaping confident,
+            responsible, and future-ready students through quality education and innovative teaching.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/holyfaith.official" class="footer__social-link" aria-label="Instagram"
+              target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer__social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/919923873374" class="footer__social-link" aria-label="WhatsApp"><i
+                class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading">Our Programs</h4>
+          <ul class="footer__links">
+            <li><a href="academics.html">Nursery</a></li>
+            <li><a href="academics.html">LKG &amp; UKG</a></li>
+            <li><a href="academics.html">Standard 1–5</a></li>
+            <li><a href="academics.html">Robotics &amp; AI</a></li>
+            <li><a href="academics.html">Smart Education</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading">Contact Us</h4>
+          <ul class="footer__contact">
+            <li><i class="fas fa-map-marker-alt"></i><span>HOLYFAITH ENGLISH SCHOOL,<br>Rukadi, Kolhapur</span></li>
+            <li><i class="fas fa-phone-alt"></i><span><a href="https://wa.me/919923873374" class="js-whatsapp-link"
+                  data-phone="919923873374" style="color:inherit" target="_blank" rel="noopener">+91 9923873374</a> / <a
+                  href="https://wa.me/917058522522" class="js-whatsapp-link" data-phone="917058522522"
+                  style="color:inherit" target="_blank" rel="noopener">7058522522</a></span></li>
+            <li><i class="fas fa-envelope"></i><span><a href="mailto:holyfaithenglishschool2007@gmail.com" class="js-email-link"
+              data-email="holyfaithenglishschool2007@gmail.com" style="color:inherit">holyfaithenglishschool2007@gmail.com</a></span></li>
+            <li><i class="fas fa-clock"></i><span>Mon – Sat: 8 AM – 4 PM</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tricolor"><span></span><span></span><span></span></div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 HOLYFAITH ENGLISH SCHOOL. All Rights Reserved. | We Shape Your Future</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="../static/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 60 });</script>
+  
+  <!-- Supabase Integration -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    // Supabase configuration
+    const SUPABASE_URL = 'https://mibqsofepprdzxmoxbnw.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1pYnFzb2ZlcHByZHp4bW94Ym53Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQzMTE3NTksImV4cCI6MjA4OTg4Nzc1OX0.mzuUBuhiIGFFjXpxZ0rFv83mHnWF2Oq7Giqojd7Dr6o';
+    
+    // Initialize Supabase client
+    let supabase = null;
+    if (SUPABASE_URL && SUPABASE_ANON_KEY) {
+      supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      console.log('✓ Supabase initialized for hero form');
+    } else {
+      console.warn('⚠️ Supabase credentials not found. Form will work in demo mode.');
+    }
+
+    // Hero form submission handler
+    document.getElementById('heroForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      submitBtn.disabled = true;
+
+      const formData = new FormData(this);
+      const data = {
+        name: formData.get('name'),
+        grade: formData.get('grade'),
+        phone: formData.get('phone'),
+        source: 'hero_form',
+        created_at: new Date().toISOString()
+      };
+
+      try {
+        if (supabase) {
+          // Submit to Supabase
+          const { data: result, error } = await supabase
+            .from('brochure_requests')
+            .insert([data]);
+
+          if (error) throw error;
+
+          alert('✓ Thank you for your interest! We will send you the brochure and our team will contact you shortly.');
+          this.reset();
+        } else {
+          // Demo mode - no Supabase
+          console.log('Demo mode - Form data:', data);
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          alert('✓ Thank you for your interest! Our team will contact you shortly.\n\n(Demo mode - Data not saved. Configure Supabase to enable storage.)');
+          this.reset();
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('✗ Sorry, there was an error. Please try again or call us at +91 9923873374');
+      } finally {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+
+</html>

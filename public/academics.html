@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academics – HOLYFAITH ENGLISH SCHOOL</title>
+  <link rel="icon" type="image/png" href="../static/images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+  <div id="splash-screen" class="splash-screen">
+    <div class="splash-orb splash-orb-1"></div>
+    <div class="splash-orb splash-orb-2"></div>
+    <div class="splash-orb splash-orb-3"></div>
+    <div class="splash-content">
+      <div class="splash-logo-wrap">
+        <img src="../static/images/logo.png" alt="School Logo" class="splash-logo">
+      </div>
+      <h1 class="splash-name">HOLYFAITH ENGLISH SCHOOL</h1>
+      <p class="splash-tagline">We Shape Your Future.</p>
+    </div>
+    <button class="splash-skip" onclick="skipSplash()">Skip Intro</button>
+  </div>
+
+  <script>
+    function skipSplash() {
+      const splash = document.getElementById('splash-screen');
+      if (splash) {
+        splash.classList.add('hidden');
+        sessionStorage.setItem('splashShown', 'true');
+        document.body.classList.add('splash-finished');
+      }
+    }
+
+    (function () {
+      const splash = document.getElementById('splash-screen');
+      if (sessionStorage.getItem('splashShown')) {
+        splash.style.display = 'none';
+        document.body.classList.add('splash-finished');
+      } else {
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+            skipSplash();
+            document.body.classList.add('splash-finished');
+          }, 3000);
+        });
+      }
+    })();
+  </script>
+
+  <div class="tricolor"><span></span><span></span><span></span></div>
+
+  <header class="header" id="header">
+    <div class="container">
+      <div class="nav__card">
+        <a href="index.html" class="nav__logo">
+          <img src="../static/images/logo.png" alt="HOLYFAITH Logo" class="nav__logo-img">
+          <span class="nav__logo-name">HOLYFAITH ENGLISH SCHOOL</span>
+        </a>
+        <nav class="nav__center" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link ">Home</a></li>
+            <li><a href="about.html" class="nav__link ">About Us</a></li>
+            <li><a href="academics.html" class="nav__link active">Academics</a></li>
+            <li><a href="admissions.html" class="nav__link ">Admissions</a></li>
+            <li><a href="contact.html" class="nav__link ">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav__right">
+          <a href="admissions.html" class="nav__apply">Apply Now <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+        <div class="nav__toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav__overlay"></div>
+
+  <main>
+<!-- Page Hero Redesign -->
+<section class="about-hero-redesign">
+  <div class="about-hero-bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+  </div>
+
+  <div class="about-hero-redesign__wrapper">
+    <div class="breadcrumb--white">
+      <a href="index.html">Home</a> /
+      <span>Academics</span>
+    </div>
+    <div class="about-hero-redesign__container">
+      <div class="about-hero-redesign__content" data-aos="fade-right" data-aos-duration="1000">
+        <h1 class="about-hero-redesign__title">Where Excellence Meets <span class="about-hero-redesign__title-mark">Belonging</span>.</h1>
+        <p class="about-hero-redesign__desc">Our comprehensive State Board curriculum is enriched with technology, creativity, and 21st-century skills for holistic growth.</p>
+      </div>
+      <div class="about-hero-redesign__visual" data-aos="fade-left" data-aos-duration="1200">
+        <div class="about-hero-redesign__glass-card">
+          <div class="about-hero-redesign__visual-badge">Academic Excellence</div>
+          <img src="../static/images/acad.png"
+            alt="Students learning in class" class="about-hero-redesign__glass-img" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Curriculum Overview -->
+<section class="section">
+  <div class="container">
+    <span class="stag stag--center"><i class="fas fa-graduation-cap"></i> Curriculum</span>
+    <h2 class="stitle stitle--center">Our Academic <span class="hl">Framework</span></h2>
+    <p class="sdesc sdesc--center">A balanced curriculum that develops intellect, creativity, and character.</p>
+    <div class="curriculum__grid">
+      <div class="curriculum-card" data-aos="fade-up">
+        <div class="curriculum-card__icon"><i class="fas fa-book"></i></div>
+        <h4>State Board</h4>
+        <p>Approved curriculum following state education board guidelines with comprehensive subject coverage.</p>
+      </div>
+      <div class="curriculum-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="curriculum-card__icon"><i class="fas fa-language"></i></div>
+        <h4>Trilingual</h4>
+        <p>English, Hindi, and regional language instruction for strong communication foundations.</p>
+      </div>
+      <div class="curriculum-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="curriculum-card__icon"><i class="fas fa-paint-brush"></i></div>
+        <h4>Activity-Based</h4>
+        <p>Learning through doing – projects, experiments, and hands-on activities in every subject.</p>
+      </div>
+      <div class="curriculum-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="curriculum-card__icon"><i class="fas fa-laptop"></i></div>
+        <h4>Tech-Enabled</h4>
+        <p>Smart classrooms with digital content, AI tools, and interactive learning platforms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Future-Ready Learning -->
+<section class="section section--warm frl-showcase">
+  <div class="container">
+    <span class="stag stag--center"><i class="fas fa-microchip"></i> Future Learning</span>
+    <h2 class="stitle stitle--center">Future-Ready Learning <span class="hl">Begins Here</span></h2>
+    <p class="sdesc sdesc--center">A powerful blend of academics, technology, and life skills designed for modern learners.</p>
+
+    <div class="frl-partner" data-aos="fade-up">
+      <div class="frl-partner__copy">
+        <h3>In Partnership With Mittsure Technologies</h3>
+        <p>We are proud to partner with <strong>Mittsure Technologies</strong>, a leading Ed-Tech provider, bringing next-generation education to our students through a balanced approach to academics, technology, and skill development.</p>
+      </div>
+      <div class="frl-partner__badge">
+        <i class="fas fa-bolt"></i>
+        <span>Ed-Tech Powered Campus</span>
+      </div>
+    </div>
+
+    <div class="frl-grid">
+      <article class="frl-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="frl-card__top">
+          <div class="frl-card__icon"><i class="fas fa-book-open"></i></div>
+          <button type="button" class="frl-card__toggle" tabindex="-1" aria-hidden="true">+</button>
+        </div>
+        <h4 class="frl-card__title">NEP 2020 Aligned Curriculum</h4>
+        <div class="frl-card__body">
+          <p class="frl-card__subtext">Our curriculum follows NEP 2020 and NCERT guidelines with concept-first teaching, activity-driven lessons, and continuous growth-focused assessment.</p>
+        </div>
+      </article>
+
+      <article class="frl-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="frl-card__top">
+          <div class="frl-card__icon"><i class="fas fa-lightbulb"></i></div>
+          <button type="button" class="frl-card__toggle" tabindex="-1" aria-hidden="true">+</button>
+        </div>
+        <h4 class="frl-card__title">Smart Learning Methodology</h4>
+        <div class="frl-card__body">
+          <p class="frl-card__subtext">Students learn through interactive tasks that build critical thinking, improve problem-solving confidence, and connect classroom ideas with real-life situations.</p>
+        </div>
+      </article>
+
+      <article class="frl-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="frl-card__top">
+          <div class="frl-card__icon"><i class="fas fa-chalkboard"></i></div>
+          <button type="button" class="frl-card__toggle" tabindex="-1" aria-hidden="true">+</button>
+        </div>
+        <h4 class="frl-card__title">Digital and Smart Classrooms</h4>
+        <div class="frl-card__body">
+          <p class="frl-card__subtext">With animated lessons, interactive digital content, and smart classroom technology, learning becomes visual, engaging, and highly effective.</p>
+        </div>
+      </article>
+
+      <article class="frl-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="frl-card__top">
+          <div class="frl-card__icon"><i class="fas fa-layer-group"></i></div>
+          <button type="button" class="frl-card__toggle" tabindex="-1" aria-hidden="true">+</button>
+        </div>
+        <h4 class="frl-card__title">Complete Learning Ecosystem</h4>
+        <div class="frl-card__body">
+          <p class="frl-card__subtext">Children receive concept-based books, creative learning kits, and structured practice and assessment modules to strengthen retention and performance.</p>
+        </div>
+      </article>
+
+      <article class="frl-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="frl-card__top">
+          <div class="frl-card__icon"><i class="fas fa-rocket"></i></div>
+          <button type="button" class="frl-card__toggle" tabindex="-1" aria-hidden="true">+</button>
+        </div>
+        <h4 class="frl-card__title">Beyond Academics</h4>
+        <div class="frl-card__body">
+          <p class="frl-card__subtext">Beyond textbooks, students explore AI and robotics, creative arts, personality development, and life skills for complete growth.</p>
+        </div>
+      </article>
+
+      <article class="frl-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="frl-card__top">
+          <div class="frl-card__icon"><i class="fas fa-school"></i></div>
+          <button type="button" class="frl-card__toggle" tabindex="-1" aria-hidden="true">+</button>
+        </div>
+        <h4 class="frl-card__title">Advanced School Support</h4>
+        <div class="frl-card__body">
+          <p class="frl-card__subtext">We ensure strong support through student performance tracking, school ERP systems, and transparent parent-school communication.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Assessment -->
+<section class="section section--alt">
+  <div class="container">
+    <span class="stag stag--center"><i class="fas fa-clipboard-check"></i> Assessment</span>
+    <h2 class="stitle stitle--center">How We <span class="hl">Assess</span></h2>
+    <p class="sdesc sdesc--center">Continuous and comprehensive evaluation for rounded student growth.</p>
+    <div class="assessment__grid">
+      <div class="assessment-card" data-aos="fade-up">
+        <div class="assessment-card__number">01</div>
+        <h4>Formative Assessment</h4>
+        <p>Regular class tests, quizzes, assignments, oral tests, and project submissions throughout the term.</p>
+      </div>
+      <div class="assessment-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="assessment-card__number">02</div>
+        <h4>Summative Assessment</h4>
+        <p>Half-yearly and annual examinations assessing overall academic progress and subject mastery.</p>
+      </div>
+      <div class="assessment-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="assessment-card__number">03</div>
+        <h4>Co-Scholastic</h4>
+        <p>Evaluation of art, sports, discipline, attendance, and participation in school activities.</p>
+      </div>
+      <div class="assessment-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="assessment-card__number">04</div>
+        <h4>Progress Reports</h4>
+        <p>Detailed report cards shared with parents each term with personalized remarks and suggestions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta__overlay"></div>
+  <div class="container">
+    <div class="cta__content" data-aos="zoom-in">
+      <h2 class="cta__title">Give Your Child the <span class="hl">Best Education</span></h2>
+      <p class="cta__desc">Explore our academic programs and find the perfect fit for your child.</p>
+      <div class="cta__btn-wrap">
+        <a href="admissions.html" class="btn btn--accent btn--lg"><i class="fas fa-pen-to-square"></i> Apply
+          Now</a>
+        <a href="contact.html" class="btn btn--ghost btn--lg"><i class="fas fa-phone-alt"></i> Contact
+          Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wave">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,40 C360,100 720,0 1080,60 C1260,80 1380,40 1440,50 L1440,0 L0,0 Z" fill="var(--bg)"></path>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <div class="footer__brand">
+            <img src="../static/images/logo.png" alt="Logo" class="footer__logo">
+            <div>
+              <h3 class="footer__brand-name">HOLYFAITH ENGLISH SCHOOL</h3>
+              <p class="footer__brand-sub">We Shape Your Future</p>
+            </div>
+          </div>
+          <p class="footer__desc">Established in 2007, HOLYFAITH ENGLISH SCHOOL is committed to shaping confident, responsible, and future-ready students through quality education and innovative teaching.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/holyfaith.official" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer__social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/919923873374" class="footer__social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Our Programs</h4>
+          <ul class="footer__links">
+            <li><a href="academics.html">Nursery</a></li>
+            <li><a href="academics.html">LKG &amp; UKG</a></li>
+            <li><a href="academics.html">Standard 1–5</a></li>
+            <li><a href="academics.html">Robotics &amp; AI</a></li>
+            <li><a href="academics.html">Smart Education</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Contact Us</h4>
+          <ul class="footer__contact">
+            <li><i class="fas fa-map-marker-alt"></i><span>HOLYFAITH ENGLISH SCHOOL,<br>Rukadi, Kolhapur</span></li>
+            <li><i class="fas fa-phone-alt"></i><span><a href="https://wa.me/919923873374" style="color:inherit" target="_blank" rel="noopener">+91 9923873374</a> / <a href="https://wa.me/917058522522" style="color:inherit" target="_blank" rel="noopener">7058522522</a></span></li>
+            <li><i class="fas fa-envelope"></i><span><a href="mailto:holyfaithenglishschool2007@gmail.com" style="color:inherit">holyfaithenglishschool2007@gmail.com</a></span></li>
+            <li><i class="fas fa-clock"></i><span>Mon – Sat: 8 AM – 4 PM</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tricolor"><span></span><span></span><span></span></div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 HOLYFAITH ENGLISH SCHOOL. All Rights Reserved. | We Shape Your Future</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="../static/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 60 });</script>
+</body>
+
+</html>

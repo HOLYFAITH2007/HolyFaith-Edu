@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}HOLYFAITH ENGLISH SCHOOL{% endblock %}</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <!-- Splash Screen -->
+  <div id="splash-screen" class="splash-screen">
+    <!-- Premium Aurora Orbs -->
+    <div class="splash-orb splash-orb-1"></div>
+    <div class="splash-orb splash-orb-2"></div>
+    <div class="splash-orb splash-orb-3"></div>
+
+
+
+    <div class="splash-content">
+      <div class="splash-logo-wrap">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="School Logo" class="splash-logo">
+      </div>
+      <h1 class="splash-name">HOLYFAITH ENGLISH SCHOOL</h1>
+      <p class="splash-tagline">We Shape Your Future.</p>
+    </div>
+    <button class="splash-skip" onclick="skipSplash()">Skip Intro</button>
+  </div>
+
+  <script>
+    function skipSplash() {
+      const splash = document.getElementById('splash-screen');
+      if (splash) {
+        splash.classList.add('hidden');
+        sessionStorage.setItem('splashShown', 'true');
+        document.body.classList.add('splash-finished');
+      }
+    }
+
+    (function () {
+      const splash = document.getElementById('splash-screen');
+      if (sessionStorage.getItem('splashShown')) {
+        splash.style.display = 'none';
+        document.body.classList.add('splash-finished');
+      } else {
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+            skipSplash();
+            document.body.classList.add('splash-finished');
+          }, 3000); // Wait for 3 seconds
+        });
+      }
+    })();
+  </script>
+
+  <!-- Tricolor Ribbon -->
+  <div class="tricolor"><span></span><span></span><span></span></div>
+
+  <!-- Header — Floating Card Navbar -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="nav__card">
+        <!-- Logo -->
+        <a href="{{ url_for('home') }}" class="nav__logo">
+          <img src="{{ url_for('static', filename='images/logo.png') }}" alt="HOLYFAITH Logo" class="nav__logo-img">
+          <span class="nav__logo-name">HOLYFAITH ENGLISH SCHOOL</span>
+        </a>
+
+        <!-- Center Nav Links -->
+        <nav class="nav__center" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="{{ url_for('home') }}"
+                class="nav__link {% if request.endpoint == 'home' %}active{% endif %}">Home</a></li>
+            <li><a href="{{ url_for('about') }}"
+                class="nav__link {% if request.endpoint == 'about' %}active{% endif %}">About Us</a></li>
+            <li><a href="{{ url_for('academics') }}"
+                class="nav__link {% if request.endpoint == 'academics' %}active{% endif %}">Academics</a></li>
+            <li><a href="{{ url_for('admissions') }}"
+                class="nav__link {% if request.endpoint == 'admissions' %}active{% endif %}">Admissions</a></li>
+            <li><a href="{{ url_for('contact') }}"
+                class="nav__link {% if request.endpoint == 'contact' %}active{% endif %}">Contact</a></li>
+          </ul>
+        </nav>
+        </nav>
+
+        <!-- Right Side — Apply Now -->
+        <div class="nav__right">
+          <a href="{{ url_for('admissions') }}" class="nav__apply">Apply Now <i
+              class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <div class="nav__toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="nav__overlay"></div>
+
+  <!-- Flash Messages -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  <div class="flash-container">
+    {% for category, message in messages %}
+    <div class="flash-message flash--{{ category }}">
+      <i class="fas fa-check-circle"></i>
+      <span>{{ message }}</span>
+      <button class="flash-close">&times;</button>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% endwith %}
+
+  <!-- Main Content -->
+  <main>{% block content %}{% endblock %}</main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__wave">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,40 C360,100 720,0 1080,60 C1260,80 1380,40 1440,50 L1440,0 L0,0 Z" fill="var(--bg)"></path>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <div class="footer__brand">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="footer__logo">
+            <div>
+              <h3 class="footer__brand-name">HOLYFAITH ENGLISH SCHOOL</h3>
+              <p class="footer__brand-sub">We Shape Your Future</p>
+            </div>
+          </div>
+          <p class="footer__desc">Established in 2007, HOLYFAITH ENGLISH SCHOOL is committed to shaping confident,
+            responsible, and future-ready students through quality education and innovative teaching.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/holyfaith.official" class="footer__social-link" aria-label="Instagram"
+              target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer__social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/919923873374" class="footer__social-link" aria-label="WhatsApp"><i
+                class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="{{ url_for('academics') }}">Academics</a></li>
+            <li><a href="{{ url_for('admissions') }}">Admissions</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading">Our Programs</h4>
+          <ul class="footer__links">
+            <li><a href="{{ url_for('academics') }}">Nursery</a></li>
+            <li><a href="{{ url_for('academics') }}">LKG &amp; UKG</a></li>
+            <li><a href="{{ url_for('academics') }}">Standard 1–5</a></li>
+            <li><a href="{{ url_for('academics') }}">Robotics &amp; AI</a></li>
+            <li><a href="{{ url_for('academics') }}">Smart Education</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading">Contact Us</h4>
+          <ul class="footer__contact">
+            <li><i class="fas fa-map-marker-alt"></i><span>HOLYFAITH ENGLISH SCHOOL,<br>Rukadi, Kolhapur</span></li>
+            <li><i class="fas fa-phone-alt"></i><span><a href="https://wa.me/919923873374" class="js-whatsapp-link"
+                  data-phone="919923873374" style="color:inherit" target="_blank" rel="noopener">+91 9923873374</a> / <a
+                  href="https://wa.me/917058522522" class="js-whatsapp-link" data-phone="917058522522"
+                  style="color:inherit" target="_blank" rel="noopener">7058522522</a></span></li>
+            <li><i class="fas fa-envelope"></i><span><a href="mailto:holyfaithenglishschool2007@gmail.com" class="js-email-link"
+              data-email="holyfaithenglishschool2007@gmail.com" style="color:inherit">holyfaithenglishschool2007@gmail.com</a></span></li>
+            <li><i class="fas fa-clock"></i><span>Mon – Sat: 8 AM – 4 PM</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tricolor"><span></span><span></span><span></span></div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 HOLYFAITH ENGLISH SCHOOL. All Rights Reserved. | We Shape Your Future</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 60 });</script>
+  {% block scripts %}{% endblock %}
+</body>
+
+</html>
