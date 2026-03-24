@@ -693,9 +693,9 @@
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1pYnFzb2ZlcHByZHp4bW94Ym53Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQzMTE3NTksImV4cCI6MjA4OTg4Nzc1OX0.mzuUBuhiIGFFjXpxZ0rFv83mHnWF2Oq7Giqojd7Dr6o';
     
     // Initialize Supabase client
-    let supabase = null;
+    let supabaseClient = null;
     if (SUPABASE_URL && SUPABASE_ANON_KEY) {
-      supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
       console.log('✓ Supabase initialized for hero form');
     } else {
       console.warn('⚠️ Supabase credentials not found. Form will work in demo mode.');
@@ -720,9 +720,9 @@
       };
 
       try {
-        if (supabase) {
+        if (supabaseClient) {
           // Submit to Supabase
-          const { data: result, error } = await supabase
+          const { data: result, error } = await supabaseClient
             .from('brochure_requests')
             .insert([data]);
 
